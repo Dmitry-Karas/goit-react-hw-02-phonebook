@@ -16,7 +16,7 @@ export const Input = styled.input`
   border-bottom: 1px solid tan;
 
   font-size: 20px;
-  color: darkred;
+  color: var(--color-accent);
   background-color: transparent;
 
   transition: all 250ms ease-in-out;
@@ -24,7 +24,7 @@ export const Input = styled.input`
   &::placeholder {
     opacity: 0;
 
-    color: darkred;
+    color: var(--color-accent);
 
     transition: opacity 250ms ease;
   }
@@ -34,20 +34,22 @@ export const Input = styled.input`
     border-bottom: 1px solid var(--color-accent);
 
     &::placeholder {
-      opacity: 0.5;
+      opacity: 0.7;
       transition-delay: 250ms;
     }
   }
 
   &:focus + label,
   &:not(:placeholder-shown) + label {
-    transform: translate(-36px, -26px);
-    font-size: 12px;
+    transform: translate(-36px, -30px);
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
+    color: var(--color-accent);
 
     & svg {
-      transform: translate(36px, 26px);
+      color: var(--color-accent);
+      transform: translate(36px, 30px);
     }
   }
 `;
@@ -64,10 +66,10 @@ export const Label = styled.label`
   font-size: 20px;
   color: tan;
 
-  transition: transform 250ms ease-in-out;
+  transition: color 250ms ease-in-out, transform 250ms ease-in-out;
 
   & svg {
     margin-right: 10px;
-    transition: transform 250ms ease-in-out;
+    transition: color 250ms ease-in-out, transform 250ms ease-in-out;
   }
 `;

@@ -55,7 +55,7 @@ export class ContactForm extends Component {
           />
 
           <Label htmlFor={this.nameInputId}>
-            <FiUser size="20" />
+            <FiUser size="22" />
             Name
           </Label>
         </InputContainer>
@@ -75,7 +75,7 @@ export class ContactForm extends Component {
             required
           />
           <Label htmlFor={this.telInputId}>
-            <FiPhone size="20" />
+            <FiPhone size="22" />
             Number
           </Label>
         </InputContainer>

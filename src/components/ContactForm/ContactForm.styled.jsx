@@ -1,7 +1,7 @@
 import styled from "@emotion/styled/macro";
 
 export const StyledForm = styled.form`
-  width: 250px;
+  width: 450px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -21,7 +21,7 @@ export const Input = styled.input`
   border: none;
   border-bottom: 1px solid tan;
 
-  font-size: 16px;
+  font-size: 20px;
   color: var(--color-accent);
   background-color: transparent;
 
@@ -45,39 +45,41 @@ export const Input = styled.input`
 
   &:focus + label,
   &:not(:placeholder-shown) + label {
-    transform: translate(-32px, -24px);
-    font-size: 10px;
+    transform: translate(-32px, -30px);
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
+    color: var(--color-accent);
 
     & svg {
-      transform: translate(32px, 24px);
+      color: var(--color-accent);
+      transform: translate(32px, 30px);
     }
   }
 `;
 
 export const Label = styled.label`
+  position: absolute;
+  left: 0;
+  bottom: 5px;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  cursor: text;
+  font-size: 20px;
 
   color: var(--color-light);
-  position: absolute;
-  cursor: text;
 
-  transition: transform 250ms ease-in-out;
-  left: 0;
-  bottom: 5px;
+  transition: color 250ms ease-in-out, transform 250ms ease-in-out;
 
   & svg {
     margin-right: 10px;
-    transition: transform 250ms ease-in-out;
+    transition: color 250ms ease-in-out, transform 250ms ease-in-out;
   }
 `;
 
 export const Button = styled.button`
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -96,7 +98,6 @@ export const Button = styled.button`
   &:hover {
     border-color: var(--color-accent);
     color: var(--color-accent);
-    /* color: #fff; */
   }
 
   & svg {

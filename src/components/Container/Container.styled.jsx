@@ -1,7 +1,7 @@
 import styled from "@emotion/styled/macro";
 
 export const StyledContainer = styled.div`
-  width: 500px;
+  width: 800px;
   margin: 0 auto;
   padding: 30px;
   border-radius: 5px;
